@@ -1,0 +1,271 @@
+0301116041 岳琳 
+url:
+http://10.64.2.100:30010/business/m5908/entry21?aac001=&aac002=230304196508294612&aab001=&aae042=&aae041=
+请求方式
+POST
+请求头
+Accept:
+application/json, text/javascript, */*; q=0.01
+Accept-Encoding:
+gzip, deflate
+Accept-Language:
+zh-CN,zh;q=0.9
+Access-Token:
+f7c3d7cc-49a3-40b3-8a1a-a5b98c7f1b3f
+Connection:
+keep-alive
+Content-Length:
+14
+Content-Type:
+application/x-www-form-urlencoded; charset=UTF-8
+Cookie:
+JSESSIONID=586451BC16B00D4B40FA82EBD7EEEBAF; SESSION=MzUzYmU0YmUtYzMxMC00M2JhLTllODctOGMwYzE3NTgzN2Rk
+Host:
+10.64.2.100:30010
+Origin:
+http://10.64.2.100:30010
+Referer:
+http://10.64.2.100:30010/portal/s111/m5908/M111590821.html?token=f7c3d7cc-49a3-40b3-8a1a-a5b98c7f1b3f&sa0200=111590821&sa0201=%E4%BA%BA%E5%91%98%E5%AE%9E%E7%BC%B4%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2
+User-Agent:
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+X-Requested-With:
+XMLHttpRequest
+
+载荷
+aac001: 			个人编号
+aac002: 230304196508294612	社会保障号
+aab001: 			单位编号
+aae042: 202212		终止年月
+aae041: 202201		开始年月	
+表单数据
+page: 1
+rows: 10	
+
+响应数据
+
+缴费类型aaa115: "正常应缴"
+单位编号aab001: "23039923030111103903"
+单位名称aab004: "个体"
+到账时间aab191: "20221202"
+个人编号aac001: "2303001133333"
+身份证号aac002: "230304196508294612"
+姓名aac003: "姜永波"
+参保身份aac066: "以个人身份参保人员"
+aae002: "202207"
+对应费款所属期aae003: "202201"
+aae080: "0"
+aae081: "0"
+个人实缴金额aae082: "703.8"
+个人实缴划入个人账户金额aae083: "281.52"
+人员缴费基数aae180: "3519"
+数据来源aae741: "系统核定"
+aae788: "0"
+aae789: "0"
+aae790: "0"
+aae791: "0"
+费用标志aae792: "正常"
+aaz223: "23220729134741000124
+
+
+
+
+
+
+
+人员参保信息查询
+
+http://10.64.2.100:30010/business/m5906/entry21?aac001=&aab001=&aae140=&aac002=230304196508294612
+post
+Accept:
+application/json, text/javascript, */*; q=0.01
+Accept-Encoding:
+gzip, deflate
+Accept-Language:
+zh-CN,zh;q=0.9
+Access-Token:
+f7c3d7cc-49a3-40b3-8a1a-a5b98c7f1b3f
+Connection:
+keep-alive
+Content-Length:
+14
+Content-Type:
+application/x-www-form-urlencoded; charset=UTF-8
+Cookie:
+JSESSIONID=216DB9474B6DF88205CAB826F0A8F4C7; SESSION=YzRiYWNmNTgtOWRjOS00ZDQxLTkwZDItZDU1NTFjNTA1NjZh
+Host:
+10.64.2.100:30010
+Origin:
+http://10.64.2.100:30010
+Referer:
+http://10.64.2.100:30010/portal/s111/m5906/M111590621.html?token=f7c3d7cc-49a3-40b3-8a1a-a5b98c7f1b3f&sa0200=111590621&sa0201=%E4%BA%BA%E5%91%98%E5%8F%82%E4%BF%9D%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2
+User-Agent:
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+X-Requested-With:
+XMLHttpRequest
+
+aac001: 
+aab001: 
+aae140: 
+aac002: 230304196508294612
+page: 1
+rows: 10
+
+{total: 2,…}
+rows
+: 
+[{aac030: "19930901", aac031: "参保缴费", aac084: "否", aae140: "企业职工基本养老保险", aae041: "199309",…},…]
+0
+: 
+{aac030: "19930901", aac031: "参保缴费", aac084: "否", aae140: "企业职工基本养老保险", aae041: "199309",…}
+aab001
+: 
+"23039923030111103903"
+aab004
+: 
+"个体"
+aab034
+: 
+"23030111"
+aac001个人编号
+: 
+"2303001133333"
+aac002
+: 
+"230304196508294612"
+aac003姓名
+: 
+"姜永波"
+aac008
+: 
+"正常参保"
+aac013
+: 
+"订立固定期限劳动合同"
+aac030人员参保日期
+: 
+"19930901"
+aac031人员参保状态
+: 
+"参保缴费"
+aac049
+: 
+"199309"
+aac066参保身份
+: 
+"以个人身份参保人员"
+aac084退休状态
+: 
+"否"
+aac313
+: 
+"230102"
+aac314
+: 
+"以个人身份参保人员"
+aae041
+: 
+"199309"
+aae100
+: 
+"有效"
+aae140险种类型
+: 
+"企业职工基本养老保险"
+aae140value
+: 
+"110"
+aae206
+: 
+""
+aae868
+: 
+""
+aaz159人员参保关系ID
+: 
+"23202001010301133333"
+ajc054
+: 
+""
+ajc055
+: 
+""
+1
+: 
+{aac030: "19930901", aac031: "暂停缴费（中断）", aac084: "否", aae140: "失业保险", aae041: "199309",…}
+aab001单位编号
+: 
+"23039923030111103903"
+aab004单位名称
+: 
+"个体"
+aab034机构编号
+: 
+"23030111"
+aac001
+: 
+"2303001133333"
+aac002社会保障号
+: 
+"230304196508294612"
+aac003
+: 
+"姜永波"
+aac008
+: 
+"正常参保"
+aac013
+: 
+"订立固定期限劳动合同"
+aac030
+: 
+"19930901"
+aac031
+: 
+"暂停缴费（中断）"
+aac049
+: 
+"199309"
+aac066
+: 
+"以个人身份参保人员"
+aac084
+: 
+"否"
+aac313
+: 
+"230102"
+aac314
+: 
+"以个人身份参保人员"
+aae041
+: 
+"199309"
+aae100
+: 
+"有效"
+aae140
+: 
+"失业保险"
+aae140value
+: 
+"210"
+aae206
+: 
+""
+aae868
+: 
+""
+aaz159
+: 
+"23021005200301133333"
+ajc054
+: 
+"0"
+ajc055
+: 
+"0"
+total
+: 
+2
+
+
