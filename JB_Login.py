@@ -30,8 +30,8 @@ class Login:
             "X-Requested-With": "XMLHttpRequest"
         }
         self.login_dic = {
-            'id': '230304198302014020',
-            'name': '‘¿¡’'
+            'id': '230304199812134414',
+            'name': '∏ﬂ…˝'
         }
         payload = {
             "aac002": idcard if idcard else self.login_dic.get('id'),
@@ -64,6 +64,7 @@ class Login:
             "password": dic.get('ua0102'),
             "username": dic.get('ua0100')
         }
+        # print(payload_login)
         url_login = self.host + '/api/auth/channel/login'
         res_login = requests.post(url=url_login, json=payload_login, headers=headers_login)
         if res_login.status_code == 200:
@@ -107,5 +108,9 @@ class Login:
 
 if __name__ == "__main__":
     l = Login()
-    l.main(name='‘¿¡’', idcard='230304198302014020')
+    # l.main(name='‘¿¡’', idcard='230304198302014020')
+    # l.main(name='¡∫”±', idcard='230304199910264423')
+    # l.main(name='’≈π¶∆’', idcard='230304199509154033')
+    # l.main(name='∏ﬂ»‹', idcard='230304199203194622')
+    l.main(name='∏ﬂ…˝', idcard='230304199812134414')
     # l.main()
