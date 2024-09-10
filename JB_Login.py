@@ -30,8 +30,8 @@ class Login:
             "X-Requested-With": "XMLHttpRequest"
         }
         self.login_dic = {
-            'id': '230304199812134414',
-            'name': '高升'
+            'id': '230304200003034021',
+            'name': '程琳'
         }
         payload = {
             "aac002": idcard if idcard else self.login_dic.get('id'),
@@ -112,5 +112,6 @@ if __name__ == "__main__":
     # l.main(name='梁颖', idcard='230304199910264423')
     # l.main(name='张功普', idcard='230304199509154033')
     # l.main(name='高溶', idcard='230304199203194622')
-    l.main(name='高升', idcard='230304199812134414')
+    # l.main(name='高升', idcard='230304199812134414')
+    l.main(name='程琳', idcard='230304200003034021')
     # l.main()
