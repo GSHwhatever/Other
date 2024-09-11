@@ -117,10 +117,6 @@ if __name__ == "__main__":
     # l.main(name='梁颖', idcard='230304199910264423')
     # l.main(name='张功普', idcard='230304199509154033')
     # l.main(name='高溶', idcard='230304199203194622')
-<<<<<<< HEAD
     l.main(name='高升', idcard='230304199812134414')
-=======
-    # l.main(name='高升', idcard='230304199812134414')
->>>>>>> 43137012a615d61b42b94bd2b5a515651ecd7650
     l.main(name='程琳', idcard='230304200003034021')
     # l.main()
