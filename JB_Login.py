@@ -3,7 +3,7 @@
 金保登录接口
 """
 from requests.exceptions import RequestException, ConnectionError, Timeout, TooManyRedirects
-import requests, time, os
+import requests, time, os, json
 
 
 class Login:
@@ -40,35 +40,39 @@ class Login:
         url = self.host + '/portal/queryUserInfoWithChannel'
         res = requests.post(url=url, data=payload, headers=headers)
         if res.status_code == 200:
+            print(res.text)
             return res.json()
 
     def login(self, dic):
-        headers_login = {
+        h_headers = {
+            "Host": "10.64.2.100:30010",
+            "Content-Length": "71",
             "Accept": "application/json, text/javascript, */*; q=0.01",
+            "X-Requested-With": "XMLHttpRequest",
+            "Authorization": "Basic amJ4cHQ6c3lzdGVt",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.95 Safari/537.36",
+            "Content-Type": "application/json",
+            "Origin": "http://10.64.2.100:30010",
+            "Referer": "http://10.64.2.100:30010/portal/login.html",
             "Accept-Encoding": "gzip, deflate",
             "Accept-Language": "zh-CN,zh;q=0.9",
-            "Authorization": "Basic amJ4cHQ6c3lzdGVt",
-            "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
-            "Content-Length": "71",
-            "Content-Type": "application/json",
-            # "Cookie": "SESSION=ZTcxYzNjYmQtYzUyMS00NzBmLWJmY2UtOTE1YzFiODBhYWIz; JSESSIONID=5A5583C8C9D700B0CE1696AEC32058D2",
-            "Host": self.host.split('/')[-1],
-            "Origin": self.host,
-            "Pragma": "no-cache",
-            "Referer": self.host + "/portal/login.html",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
-            "X-Requested-With": 'XMLHttpRequest'
+            "Cookie": "JSESSIONID=474C958FD8A4B85110CF1B3D92C42BC6; SESSION=OTZiZjM4MTQtYzhhOC00Mjk1LWExMjMtZDdjNGU3NTBhMTFm",
+            "Connection": "keep-alive"
         }
+        session = requests.Session()
+        session.headers.update(h_headers)
         payload_login = {
-            "password": dic.get('ua0102'),
-            "username": dic.get('ua0100')
+            "username": dic.get('ua0100'),
+            "password": dic.get('ua0102')
         }
         # print(payload_login)
         url_login = self.host + '/api/auth/channel/login'
-        res_login = requests.post(url=url_login, json=payload_login, headers=headers_login)
+        res_login = session.post(url=url_login, data=json.dumps(payload_login).replace(' ',''), headers=h_headers)
         if res_login.status_code == 200:
             return res_login.json()
+        else:
+            print(res_login.status_code)
+            print(res_login.text)
 
     def write_Acces_Token(self, token):
         path = os.path.join(os.path.dirname(__file__), 'config')
@@ -85,7 +89,8 @@ class Login:
             if r.get('msg')  == "登陆成功":
                 token = r.get('map').get('Access-Token')
                 self.write_Acces_Token(token)
-                print(f'{self.login_dic.get("name")}登录成功-{token}')
+                tar_name = name if name else self.login_dic.get("name")
+                print(f'{tar_name}登录成功-{token}')
             else:
                 print('登录失败')
         else:
@@ -113,4 +118,5 @@ if __name__ == "__main__":
     # l.main(name='张功普', idcard='230304199509154033')
     # l.main(name='高溶', idcard='230304199203194622')
     l.main(name='高升', idcard='230304199812134414')
+    l.main(name='程琳', idcard='230304200003034021')
     # l.main()
